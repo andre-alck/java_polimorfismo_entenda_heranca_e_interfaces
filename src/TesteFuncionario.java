@@ -5,5 +5,7 @@ public class TesteFuncionario {
         andre.setCpf("152.651.338-28");
         andre.setSalario(900);
 
+        System.out.println(andre.salario);
+
     }
 }
