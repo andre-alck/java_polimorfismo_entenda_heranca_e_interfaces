@@ -13,7 +13,7 @@ public class TesteGerente {
         boolean cpfTeste = gerente.getCpf() == cpf;
         boolean salarioTeste = gerente.getSalario() == salario;
         boolean senhaTeste = gerente.getSenha() == senha;
-        boolean bonificacaoTeste = gerente.getBonificacao() == salario + (salario * 0.1);
+        boolean bonificacaoTeste = gerente.getBonificacao() == salario;
 
         TestHelper testHelper = new TestHelper();
         List testes = Arrays.asList(nomeTeste, cpfTeste, salarioTeste, senhaTeste, bonificacaoTeste);

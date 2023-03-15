@@ -8,19 +8,17 @@ public class TesteReferencias {
         double salario = -1.5;
         int senha = -1;
 
-        Funcionario funcionario = new Funcionario(nome, cpf, salario);
         EditorDeVideo editorDeVideo = new EditorDeVideo(nome, cpf, salario);
         Designer designer = new Designer(nome, cpf, salario);
         Gerente gerente = new Gerente(nome, cpf, salario, senha);
         ControleBonificacao controleBonificacao = new ControleBonificacao();
         TestHelper testHelper = new TestHelper();
 
-        controleBonificacao.registra(funcionario);
         controleBonificacao.registra(editorDeVideo);
         controleBonificacao.registra(designer);
         controleBonificacao.registra(gerente);
 
-         boolean controleBonificacaoTeste = controleBonificacao.getBonificacao() == funcionario.getBonificacao() + editorDeVideo.getBonificacao() + designer.getBonificacao() + gerente.getBonificacao();
+         boolean controleBonificacaoTeste = controleBonificacao.getBonificacao() == editorDeVideo.getBonificacao() + designer.getBonificacao() + gerente.getBonificacao();
 
 
         List testes = Arrays.asList(controleBonificacaoTeste);
