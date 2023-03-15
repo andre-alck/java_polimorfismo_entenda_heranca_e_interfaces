@@ -9,11 +9,11 @@ public class TesteTransferenciaComSaldoExatamenteSuficiente {
         ContaPoupanca contaPoupanca = new ContaPoupanca(-1, -1);
 
         // acao
-        contaCorrente.transfere(100, contaPoupanca);
+        contaCorrente.transfere(99.9, contaPoupanca);
 
         // verificacao
         boolean testeSaldoDaContaQueTransferiuSaldo = contaCorrente.getSaldo() == 0;
-        boolean testeSaldoDaContaQueRecebeuSaldo = contaPoupanca.getSaldo() == 200;
+        boolean testeSaldoDaContaQueRecebeuSaldo = contaPoupanca.getSaldo() == 199.9;
         List<Boolean> testes = Arrays.asList(testeSaldoDaContaQueTransferiuSaldo, testeSaldoDaContaQueRecebeuSaldo);
         testHelper.isAlgumTesteFalhou(testes);
     }

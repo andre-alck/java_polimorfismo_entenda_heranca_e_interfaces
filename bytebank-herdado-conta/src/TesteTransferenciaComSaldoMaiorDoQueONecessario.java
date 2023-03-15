@@ -12,7 +12,7 @@ public class TesteTransferenciaComSaldoMaiorDoQueONecessario {
         cc.transfere(10, cp);
 
         // verificacao
-        boolean testeSaldoDaContaQueTransferiuSaldo = cc.getSaldo() == 90;
+        boolean testeSaldoDaContaQueTransferiuSaldo = cc.getSaldo() == 89.9;
         boolean testeSaldoDaContaQueRecebeuSaldo = cp.getSaldo() == 110;
         List<Boolean> testes = Arrays.asList(testeSaldoDaContaQueTransferiuSaldo, testeSaldoDaContaQueRecebeuSaldo);
         testHelper.isAlgumTesteFalhou(testes);
