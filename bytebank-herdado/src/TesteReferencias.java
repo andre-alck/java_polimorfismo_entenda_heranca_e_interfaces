@@ -23,6 +23,5 @@ public class TesteReferencias {
 
         List testes = Arrays.asList(controleBonificacaoTeste);
         boolean isAlgumTesteFalhou = testHelper.isAlgumTesteFalhou(testes);
-        System.out.println("Algum teste falhou: " + isAlgumTesteFalhou);
     }
 }

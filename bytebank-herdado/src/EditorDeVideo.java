@@ -3,6 +3,7 @@ public class EditorDeVideo extends Funcionario {
         super(nome, cpf, salario);
     }
 
+    @Override
     public double getBonificacao() {
         return 100;
     }

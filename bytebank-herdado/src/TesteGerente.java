@@ -13,11 +13,10 @@ public class TesteGerente {
         boolean cpfTeste = gerente.getCpf() == cpf;
         boolean salarioTeste = gerente.getSalario() == salario;
         boolean senhaTeste = gerente.getSenha() == senha;
-        boolean bonificacaoTeste = gerente.getBonificacao() == salario;
+        boolean bonificacaoTeste = gerente.getBonificacao() == 50;
 
         TestHelper testHelper = new TestHelper();
         List testes = Arrays.asList(nomeTeste, cpfTeste, salarioTeste, senhaTeste, bonificacaoTeste);
         boolean isAlgumTesteFalhou = testHelper.isAlgumTesteFalhou(testes);
-        System.out.println("Algum teste falhou: " + isAlgumTesteFalhou);
     }
 }
