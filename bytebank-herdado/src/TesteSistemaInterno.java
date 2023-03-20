@@ -7,12 +7,14 @@ public class TesteSistemaInterno {
         String nome = "g";
         String cpf = "-1";
         double salario = -1.5;
+        Autenticador autenticadorParaSenhaCorreta = new Autenticador();
+        Autenticador autenticadorParaSenhaIncorreta = new Autenticador();
         int senhaCorreta = -1;
         int senhaIncorreta = 0;
 
         TestHelper testHelper = new TestHelper();
-        Gerente gerenteComSenhaCorreta = new Gerente(nome, cpf, salario, senhaCorreta);
-        Gerente gerenteComSenhaIncorreta = new Gerente(nome, cpf, salario, senhaIncorreta);
+        Gerente gerenteComSenhaCorreta = new Gerente(nome, cpf, salario, senhaCorreta, autenticadorParaSenhaCorreta);
+        Gerente gerenteComSenhaIncorreta = new Gerente(nome, cpf, salario, senhaIncorreta, autenticadorParaSenhaIncorreta);
         SistemaInterno sistemaInterno = new SistemaInterno();
 
         // acao

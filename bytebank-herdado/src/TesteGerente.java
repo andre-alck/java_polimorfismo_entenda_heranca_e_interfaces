@@ -6,13 +6,14 @@ public class TesteGerente {
         String nome = "n";
         String cpf = "c";
         double salario = -1.5;
+        Autenticador autenticador = new Autenticador();
         int senha = -1;
-        Gerente gerente = new Gerente(nome, cpf, salario, senha);
+        Gerente gerente = new Gerente(nome, cpf, salario, senha, autenticador);
 
         boolean nomeTeste = gerente.getNome() == nome;
         boolean cpfTeste = gerente.getCpf() == cpf;
         boolean salarioTeste = gerente.getSalario() == salario;
-        boolean senhaTeste = gerente.getSenha() == senha;
+        boolean senhaTeste = gerente.getAutenticador().getSenha() == senha;
         boolean bonificacaoTeste = gerente.getBonificacao() == 50;
 
         TestHelper testHelper = new TestHelper();

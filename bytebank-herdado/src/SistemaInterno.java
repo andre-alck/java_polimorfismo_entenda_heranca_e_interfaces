@@ -3,6 +3,7 @@ public class SistemaInterno {
 
     public boolean autentica(Autenticavel autenticavel) {
         boolean isAutenticado = autenticavel.autentica(senha);
+
         if(isAutenticado) {
             System.out.println("Acesso liberado.");
         } else {
