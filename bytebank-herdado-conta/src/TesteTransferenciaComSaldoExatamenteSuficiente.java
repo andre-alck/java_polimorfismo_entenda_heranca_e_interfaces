@@ -5,7 +5,8 @@ public class TesteTransferenciaComSaldoExatamenteSuficiente {
     public static void main(String[] args) {
         // preparacao
         TestHelper testHelper = new TestHelper();
-        ContaCorrente contaCorrente = new ContaCorrente(-1, -1);
+        CalculadorImposto calculadorImposto = new CalculadorImposto();
+        ContaCorrente contaCorrente = new ContaCorrente(-1, -1, calculadorImposto);
         ContaPoupanca contaPoupanca = new ContaPoupanca(-1, -1);
 
         // acao

@@ -5,7 +5,8 @@ public class TesteTransferenciaComSaldoMaiorDoQueONecessario {
     public static void main(String[] args) {
         // preparacao
         TestHelper testHelper = new TestHelper();
-        ContaCorrente cc = new ContaCorrente(-1, -1);
+        CalculadorImposto calculadorImposto = new CalculadorImposto();
+        ContaCorrente cc = new ContaCorrente(-1, -1, calculadorImposto);
         ContaPoupanca cp = new ContaPoupanca(-1, -1);
 
         // acao
