@@ -4,6 +4,7 @@ public class AcaoBolsa implements Tributavel {
     public AcaoBolsa(CalculadorImposto calculadorImposto) {
         this.calculadorImposto = calculadorImposto;
     }
+
     @Override
     public double getValorImposto() {
         return calculadorImposto.getValorImposto();

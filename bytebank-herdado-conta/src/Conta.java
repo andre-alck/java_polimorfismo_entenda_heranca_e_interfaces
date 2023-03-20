@@ -1,9 +1,9 @@
 public abstract class Conta {
+    private static int total = 0;
     private double saldo;
     private int agencia;
     private int numero;
     private Cliente titular;
-    private static int total = 0;
 
     public Conta(int agencia, int numero) {
         Conta.total++;
@@ -12,6 +12,10 @@ public abstract class Conta {
         this.numero = numero;
         this.saldo = 100;
         System.out.println("Estou criando uma conta " + this.numero);
+    }
+
+    public static int getTotal() {
+        return Conta.total;
     }
 
     public abstract void deposita(double valor);
@@ -38,6 +42,10 @@ public abstract class Conta {
         return this.saldo;
     }
 
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
     public int getNumero() {
         return this.numero;
     }
@@ -62,20 +70,12 @@ public abstract class Conta {
         this.agencia = agencia;
     }
 
-    public void setTitular(Cliente titular) {
-        this.titular = titular;
-    }
-
     public Cliente getTitular() {
         return this.titular;
     }
 
-    public static int getTotal() {
-        return Conta.total;
-    }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
     }
 
 }

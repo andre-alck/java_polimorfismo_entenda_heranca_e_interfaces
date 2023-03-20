@@ -4,6 +4,7 @@ public class SeguroDeVida implements Tributavel {
     SeguroDeVida(CalculadorImposto calculadorImposto) {
         this.calculadorImposto = calculadorImposto;
     }
+
     @Override
     public double getValorImposto() {
         return calculadorImposto.getValorImposto();
